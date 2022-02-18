@@ -1,0 +1,19 @@
+import Footer from '../Footer/Footer.js';
+import Header from '../Header/Header.js';
+import Main from '../Main/Main.js';
+import productsData from '../../data/products.js';
+import './App.css';
+import {useState} from 'react';
+
+function App() {
+  const [itemsInCart, setItemsInCart] = useState(["1","2","3"]);
+  return (
+    <div className="container">
+      <Header />
+      <Main products={productsData} itemsInCart={itemsInCart}/>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
